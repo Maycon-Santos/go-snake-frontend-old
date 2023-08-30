@@ -1,0 +1,244 @@
+.loader {
+  position: relative;
+  display: block;
+  width: 140px;
+  height: 20px;
+  background-image: linear-gradient(rgb(255 255 255 / 50%) 20px, transparent 0),
+    linear-gradient(rgb(255 255 255 / 50%) 20px, transparent 0),
+    linear-gradient(rgb(255 255 255 / 50%) 20px, transparent 0),
+    linear-gradient(rgb(255 255 255 / 50%) 20px, transparent 0);
+  background-repeat: no-repeat;
+  background-position:
+    0 0,
+    40px 0,
+    80px 0,
+    120px 0;
+  background-size: 20px auto;
+  animation: pgfill 1s linear infinite;
+}
+
+.nes-btn.is-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 105px;
+    height: 15px;
+    content: '';
+    background-image: linear-gradient(
+        rgb(255 255 255 / 50%) 15px,
+        transparent 0
+      ),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0);
+    background-repeat: no-repeat;
+    background-position:
+      0 0,
+      30px 0,
+      60px 0,
+      90px 0;
+    background-size: 15px auto;
+    transform: translate(-50%, -50%);
+    animation: pgfill 1s linear infinite;
+  }
+
+  &::after {
+    content: initial;
+  }
+}
+
+@keyframes pgfill {
+  0% {
+    background-image: linear-gradient(
+        rgb(255 255 255 / 50%) 15px,
+        transparent 0
+      ),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0);
+  }
+
+  25% {
+    background-image: linear-gradient(white 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0);
+  }
+
+  50% {
+    background-image: linear-gradient(
+        rgb(255 255 255 / 50%) 15px,
+        transparent 0
+      ),
+      linear-gradient(white 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0);
+  }
+
+  75% {
+    background-image: linear-gradient(
+        rgb(255 255 255 / 50%) 15px,
+        transparent 0
+      ),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(white 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0);
+  }
+
+  100% {
+    background-image: linear-gradient(
+        rgb(255 255 255 / 50%) 15px,
+        transparent 0
+      ),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(rgb(255 255 255 / 50%) 15px, transparent 0),
+      linear-gradient(white 15px, transparent 0);
+  }
+}
+
+/* .loader {
+  width: 3px;
+  height: 3px;
+  color: rgb(255 255 255 / 50%);
+  box-shadow:
+    -8px -8px 0 3px,
+    -8px -8px 0 3px,
+    -8px -8px 0 3px,
+    -8px -8px 0 3px;
+  animation: loader-38 6s infinite;
+}
+
+.nes-btn.is-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 3px;
+    color: rgb(255 255 255 / 50%);
+    content: '';
+    box-shadow:
+      -8px -8px 0 3px,
+      -8px -8px 0 3px,
+      -8px -8px 0 3px,
+      -8px -8px 0 3px;
+    transform: translate(-50%, -50%);
+    animation: loader-38 6s infinite;
+  }
+}
+
+@keyframes loader-38 {
+  0% {
+    box-shadow:
+      -8px -8px 0 3px,
+      -8px -8px 0 3px,
+      -8px -8px 0 3px,
+      -8px -8px 0 3px;
+  }
+
+  8.33% {
+    box-shadow:
+      -8px -8px 0 3px,
+      8px -8px 0 3px,
+      8px -8px 0 3px,
+      8px -8px 0 3px;
+  }
+
+  16.66% {
+    box-shadow:
+      -8px -8px 0 3px,
+      8px -8px 0 3px,
+      8px 8px 0 3px,
+      8px 8px 0 3px;
+  }
+
+  24.99% {
+    box-shadow:
+      -8px -8px 0 3px,
+      8px -8px 0 3px,
+      8px 8px 0 3px,
+      -8px 8px 0 3px;
+  }
+
+  33.32% {
+    box-shadow:
+      -8px -8px 0 3px,
+      8px -8px 0 3px,
+      8px 8px 0 3px,
+      -8px -8px 0 3px;
+  }
+
+  41.65% {
+    box-shadow:
+      8px -8px 0 3px,
+      8px -8px 0 3px,
+      8px 8px 0 3px,
+      8px -8px 0 3px;
+  }
+
+  49.98% {
+    box-shadow:
+      8px 8px 0 3px,
+      8px 8px 0 3px,
+      8px 8px 0 3px,
+      8px 8px 0 3px;
+  }
+
+  58.31% {
+    box-shadow:
+      -8px 8px 0 3px,
+      -8px 8px 0 3px,
+      8px 8px 0 3px,
+      -8px 8px 0 3px;
+  }
+
+  66.64% {
+    box-shadow:
+      -8px -8px 0 3px,
+      -8px -8px 0 3px,
+      8px 8px 0 3px,
+      -8px 8px 0 3px;
+  }
+
+  74.97% {
+    box-shadow:
+      -8px -8px 0 3px,
+      8px -8px 0 3px,
+      8px 8px 0 3px,
+      -8px 8px 0 3px;
+  }
+
+  83.3% {
+    box-shadow:
+      -8px -8px 0 3px,
+      8px 8px 0 3px,
+      8px 8px 0 3px,
+      -8px 8px 0 3px;
+  }
+
+  91.63% {
+    box-shadow:
+      -8px -8px 0 3px,
+      -8px 8px 0 3px,
+      -8px 8px 0 3px,
+      -8px 8px 0 3px;
+  }
+
+  100% {
+    box-shadow:
+      -8px -8px 0 3px,
+      -8px -8px 0 3px,
+      -8px -8px 0 3px,
+      -8px -8px 0 3px;
+  }
+} */

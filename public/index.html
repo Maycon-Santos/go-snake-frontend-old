@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-br">
   <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8" />
@@ -23,9 +23,278 @@
       </strong>
     </noscript>
     <!-- No script message end -->
-
     <!-- Root -->
-    <div id="root" class="root"></div>
+    <div id="root" class="root">
+      <div id="screens">
+        <div id="screen-loading" class="screen" style="display: block">
+          <div class="row mb-3">
+            <div class="col d-flex justify-content-center">
+              <span>NOW LOADING ...</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <progress
+                class="nes-progress is-dark"
+                id="loading-progress-bar"
+                value="0"
+                max="100"
+              ></progress>
+            </div>
+          </div>
+        </div>
+
+        <div id="screen-login" class="screen">
+          <div class="row mb-5">
+            <div class="col">
+              <h1 class="logo">SNAKE<br />GAME</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-4">
+              <h3>Sign in</h3>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col">
+              <form action="" id="login-form">
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      id="login-username-input"
+                      class="nes-input is-dark"
+                      placeholder="Username"
+                      name="username"
+                      spellcheck="false"
+                    />
+                  </div>
+                </div>
+                <span
+                  class="nes-text is-error field-message"
+                  id="login-username-error-message"
+                ></span>
+                <div class="row mt-4 mb-3">
+                  <div class="col">
+                    <input
+                      type="password"
+                      id="login-password-input"
+                      class="nes-input is-dark"
+                      placeholder="Password"
+                      name="password"
+                      spellcheck="false"
+                    />
+                  </div>
+                </div>
+                <span
+                  class="nes-text is-error field-message"
+                  id="login-password-error-message"
+                ></span>
+                <div class="row mt-4">
+                  <div
+                    class="col d-flex justify-content-end align-items-center"
+                  >
+                    <a href="#" id="login-forgot-password">forgot password </a>
+                  </div>
+                  <div class="col-md-auto d-flex justify-content-end">
+                    <button
+                      type="submit"
+                      class="nes-btn is-primary is-dark"
+                      id="login-submit"
+                    >
+                      Sign in
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col d-flex justify-content-center">
+              <span>Don't have an account?</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <button
+                type="button"
+                class="nes-btn is-dark"
+                id="login-goto-register"
+              >
+                Create your account
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="screen-recover-password" class="screen">
+          <div class="row mb-5">
+            <div class="col">
+              <h1 class="logo">SNAKE<br />GAME</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-4">
+              <h3>Recover Password</h3>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col">
+              <form action="" id="recover-password-form">
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      id="recover-password-username-input"
+                      class="nes-input is-dark"
+                      placeholder="Username"
+                      name="username"
+                      spellcheck="false"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-end">
+                    <button type="submit" class="nes-btn is-primary is-dark">
+                      Recover
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col d-flex justify-content-center">
+              <span>Do you have the password??</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <button
+                type="button"
+                class="nes-btn is-dark"
+                id="recover-password-goto-login"
+              >
+                Sign in
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="screen-register" class="screen">
+          <div class="row mb-5">
+            <div class="col">
+              <h1 class="logo">SNAKE<br />GAME</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-4">
+              <h3>Create an account</h3>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col">
+              <form action="" id="register-form">
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      id="register-username-input"
+                      class="nes-input is-dark"
+                      placeholder="Username"
+                      name="username"
+                      spellcheck="false"
+                    />
+                  </div>
+                </div>
+                <span
+                  class="nes-text is-error field-message"
+                  id="register-username-error-message"
+                ></span>
+                <div class="row mt-4 mb-3">
+                  <div class="col">
+                    <input
+                      type="password"
+                      id="register-password-input"
+                      class="nes-input is-dark"
+                      placeholder="Password"
+                      name="password"
+                      spellcheck="false"
+                    />
+                  </div>
+                </div>
+                <span
+                  class="nes-text is-error field-message"
+                  id="register-password-error-message"
+                ></span>
+                <div class="row mt-4">
+                  <div class="col d-flex justify-content-end">
+                    <button
+                      type="submit"
+                      class="nes-btn is-primary is-dark"
+                      id="register-submit"
+                    >
+                      Sign up
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col d-flex justify-content-center">
+              <span>Already have an account?</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <button
+                type="button"
+                class="nes-btn is-dark"
+                id="register-goto-login"
+              >
+                Sign in
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="screen-lobby" class="screen">
+          <div class="row">
+            <div class="col mb-4">
+              <h3>Enter room</h3>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col">
+              <form action="" id="lobby-form">
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      id="lobby-room-input"
+                      class="nes-input is-dark"
+                      placeholder="Room ID"
+                      name="room_id"
+                      spellcheck="false"
+                    />
+                  </div>
+                  <div class="col-auto d-flex justify-content-end">
+                    <button type="submit" class="nes-btn is-primary is-dark">
+                      Enter
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div id="screen-game" class="screen is-full">
+          <canvas id="game" width="640" height="480"></canvas>
+        </div>
+      </div>
+    </div>
     <!-- Root end -->
   </body>
 </html>

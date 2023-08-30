@@ -11,6 +11,5 @@ module.exports = {
         ignoreAtRules: ['mixin', 'mixin-content', 'define-mixin'],
       },
     ],
-    'selector-max-id': 0,
   },
 };

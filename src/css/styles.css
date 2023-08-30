@@ -1,2 +1,8 @@
-/* Import all base styles. */
-@import url('./all/all.css');
+@import url('./_reset.css');
+@import url('../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css');
+@import url('../../node_modules/bootstrap/dist/css/bootstrap-utilities.min.css');
+@import url('./global.css');
+@import url('./screens/main.css');
+@import url('./loader.css');
+@import url('https://unpkg.com/nes.css@2.3.0/css/nes.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu&display=swap');
